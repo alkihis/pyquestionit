@@ -9,7 +9,7 @@ setup(
   author = 'Alkihis',                   # Type in your name
   author_email = 'beranger.louis.bio@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/alkihis/pyquestionit',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/alkihis/pyquestionit/archive/1.0.0.tar.gz', 
+  download_url = 'https://github.com/alkihis/pyquestionit/archive/1.0.1.tar.gz', 
   long_description=open('./README.md', 'r').read(),
   long_description_content_type='text/markdown',
   keywords = ['questionit', 'api client'],
