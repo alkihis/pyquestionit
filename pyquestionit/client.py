@@ -14,15 +14,13 @@ class QuestionIt:
 
     params
       Query or body parameter, as a dictionnary
-    files
-      Attached files
     headers
       Custom HTTP headers as a dictionnary
     auth
       `True` (default) if current token is used, `False` for no auth,
       a `str` for custom authentification token
     with_rq
-      `True` if response should be returned accross the result `{ 'response': response_object, 'result': json_result }`
+      `True` if response should be returned instead of the direct result
   """
 
   __PREFIX = 'https://api.questionit.space/'
@@ -368,10 +366,7 @@ class QuestionIt:
     resp.raise_for_status()
 
     if with_rq:
-      return {
-        'response': resp,
-        'result': resp.json() if len(resp.text) else None
-      }
+      return resp
 
     return resp.json() if len(resp.text) else None
 
