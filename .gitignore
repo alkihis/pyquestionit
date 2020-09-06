@@ -2,3 +2,8 @@
 .envs
 config.py
 __pycache__
+dist
+build
+*.egg-info
+._.DS_Store
+.DS_Store

@@ -1,4 +1,11 @@
-from distutils.core import setup
+import pathlib
+from setuptools import setup
+
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
 
 setup(
   name = 'pyquestionit',         # How you named your package folder (MyLib)
@@ -9,9 +16,10 @@ setup(
   author = 'Alkihis',                   # Type in your name
   author_email = 'beranger.louis.bio@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/alkihis/pyquestionit',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/alkihis/pyquestionit/archive/1.0.1.tar.gz', 
-  long_description=open('./README.md', 'r').read(),
-  long_description_content_type='text/markdown',
+  # download_url = 'https://github.com/alkihis/pyquestionit/archive/1.0.1.tar.gz', 
+  long_description=README,
+  long_description_content_type="text/markdown",
+  include_package_data=True,
   keywords = ['questionit', 'api client'],
   install_requires=[            
     'requests',
